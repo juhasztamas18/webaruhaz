@@ -13,7 +13,7 @@ body, html {
 
 .bg {
     height: 50%;
-    background: url('fejlec1.jpg');
+    background: url('/images/fejlec1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -74,6 +74,8 @@ body, html {
       width: 100%;
       max-width: 200px;
       max-height: 200px;
+      min-width: 200px;
+      min-height: 200px;
   }
 
   button {

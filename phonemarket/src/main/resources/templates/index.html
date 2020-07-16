@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hun">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" href = "icon.PNG"   type = "image/x-icon"> 
+    <link  rel="stylesheet" th:href="@{css/designe.css}"  href="../static/css/designe.css">
+    <title th:text="${pageTitle}">Phone market</title>
+</head>
+
+
+
+<body>
+    <section class="bg">
+        <div class="cim">Flegship mobilok megfizethető áron</div>
+    </section>
+
+    <section class="tartalomBx ">
+        <h2 style="text-align:center; font-size: 40px; padding-bottom: 20px;">Kinálatunk</h2>
+        <div class="row">
+            <div class="column" th:each="telefon:${telefonok}">
+                  <div class="card" >
+                  <img th:src="@{${telefon.imgU}}" >
+                  <h3 th:text="${telefon.nev}">Huawei P30</h3>
+                  <p class="ram" th:text="'Ram: '+${telefon.ram} + 'Gb'">Ram 6Gb</p>
+                  <p class="proci" th:text="'Proceszor: ' + ${telefon.proceszor}">Proceszor</p>
+                  <p class="tarh" th:text="'Tárhely: '+ ${telefon.tarhely} + 'Gb'">64Gb</p>
+                  <p th:text="'Ár: ' + ${telefon.ar} + '$'">200$</p>
+                  <p><button>Buy Now</button></p>
+                </div>
+            </div>
+          </div>
+
+    </section>
+    
+    
+</body>
+
+</html>
