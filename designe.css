@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Itim"; 
+    -webkit-box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+
+.bg {
+    height: 50%;
+    background: url('fejlec1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    
+}
+
+.cim {
+    margin-top: 100px;
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+    font-size: 36px;
+    background-color: rgba(105, 105, 105, 0.698);
+}
+
+.tartalomBx {
+    background: #6c899c;
+    padding: 40px 60px 40px 60px;
+    text-align: center;
+    
+}
+
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+
+  .card img {
+      width: 100%;
+      max-width: 200px;
+      max-height: 200px;
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(23, 31, 102);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+ }
+ button:hover, a:hover {
+    opacity: 0.7;
+ }
