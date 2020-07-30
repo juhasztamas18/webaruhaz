@@ -1,15 +1,21 @@
 package com.phonemarket.controller;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.phonemarket.domain.Phone;
+import com.phonemarket.repository.PhoneRepo;
 
 @Controller
 public class HomeController {
+	
+	@Autowired
+	PhoneRepo phoneRepository;
 
 	@RequestMapping("/")
 	public String index(Model model) {
@@ -19,10 +25,10 @@ public class HomeController {
 	}
 	
 	
-	private ArrayList<Phone> getPhones() { 
-	ArrayList<Phone> telefonok = new ArrayList<>();
+	private List<Phone> getPhones() { 
+	List<Phone> telefonok = phoneRepository.findAll();
 	
-	Phone huawei = new Phone();
+	/*Phone huawei = new Phone();
 	huawei.setNev("Huawei P30");
 	huawei.setRam(6);
 	huawei.setTarhely(64);
@@ -59,6 +65,8 @@ public class HomeController {
 	telefonok.add(lg);
 	telefonok.add(iphone);
 	telefonok.add(huawei);
+	*/
 	return telefonok;
+	
 	}
 }
